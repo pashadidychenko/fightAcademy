@@ -59,19 +59,29 @@ export async function fight(firstFighter, secondFighter) {
 }
 
 export function getDamage(attacker, defender) {
-  const damage = getHitPower(attacker) - getBlockPower(defender);
-  if (damage <= 0) return 0;
-  return damage;
+  let damage = getHitPower(attacker) - getBlockPower(defender);
+
+  if (damage <= 0) {
+    return 0;
+  } else {
+    return damage;
+  }
   // return damage
 }
 
 export function getHitPower(fighter) {
-  return fighter * (Math.random() * 2);
+  const attack = fighter;
+  const criticalHitChance = Math.random() * 2;
+  const power = attack * criticalHitChance;
+  return power;
   // return hit power
 }
 
 export function getBlockPower(fighter) {
-  return fighter * (Math.random() * 2);
+  const defense = fighter;
+  const dodgeChance = Math.random() * 2;
+  const power = defense * dodgeChance;
+  return power;
   // return block power
 }
 
