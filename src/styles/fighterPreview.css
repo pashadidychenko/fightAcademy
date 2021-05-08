@@ -1,0 +1,23 @@
+.fighter-preview___root {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 250px;
+}
+
+.fighter-preview___right {
+  align-items: flex-end;
+}
+
+.fighter-preview___left {
+  align-items: flex-start;
+}
+
+.fighter-preview___info {
+  background: rgba(255, 253, 253, 0.7);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  padding: 10px;
+  border-radius: 20px;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+}
